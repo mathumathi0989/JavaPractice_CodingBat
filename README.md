@@ -1,0 +1,2 @@
+# JavaPractice
+Solving Java programs
