@@ -10,10 +10,6 @@ public class dec7 {
 //Warm up 3: Count the number of "xx" in the given string. We'll say that overlapping is allowed, so "xxx" contains 2 "xx".
 
 	
-
-		
-		
-		
 		
 		System.out.println(stringTimes("Hi", 2));// "HiHi"
 		System.out.println(stringTimes("Hi", 3));// "HiHiHi"
@@ -23,6 +19,9 @@ public class dec7 {
 		System.out.println(frontTimes("Chocolate", 3));// "ChoChoCho"
 		System.out.println(frontTimes("Abc", 3));// "AbcAbcAbc
 		System.out.println(frontTimes("A", 4) );// "AAAA"
+		
+		
+		
 		
 	}
 	
