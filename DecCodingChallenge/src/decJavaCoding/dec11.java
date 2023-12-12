@@ -10,6 +10,8 @@ public class dec11 {
 //String 3: Given a string, if the string begins with "red" or "blue" return that color string, otherwise return the empty string.
 //String 4: Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with "edited".
 //String 5: Given two strings, append them together (known as "concatenation") and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So "Hello" and "Hi" yield "loHi". The strings may be any length.
+//String 6: Given a string, return a new string made of 3 copies of the first 2 chars of the original string. The string may be any length. If there are fewer than 2 chars, use whatever is there.
+//String 7: Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning, so "HelloHe" yields "lloHe". The substring may overlap with itself, so "Hi" yields "". Otherwise, return the original string unchanged.
 		
 
 		
@@ -28,7 +30,15 @@ public class dec11 {
 		System.out.println(minCat("Hello", "Hi")  );// "loHi"
 		System.out.println(minCat("Hello", "java") );// "ellojava"
 		System.out.println(minCat("java", "Hello") );//"javaello"
-		
+		System.out.println(extraFront("Hello") );// "HeHeHe"
+		System.out.println(extraFront("ab") );// "ababab"
+		System.out.println(extraFront("H") );//"HHH"
+		System.out.println(without2("HelloHe") );// "lloHe"
+		System.out.println(without2("HelloHi") );//"HelloHi"
+		System.out.println(without2("Hi") );// ""
+
+
+
 	}
 
 	public static String conCat(String a, String b) {
@@ -96,6 +106,34 @@ public static String minCat(String a, String b) {
     return a.concat(b.substring(b.length()-a.length(),b.length()));
   }
   else return a.concat(b);
+}
+
+public static String extraFront(String str) {
+  
+  if(str.length()>2){
+    return str.substring(0,2)+str.substring(0,2)+str.substring(0,2);
+  }
+  else return str+str+str;
+  
+}
+public static String without2(String str) {
+  
+  if(str.length()>4) {
+    if(str.substring(0,2).equals(str.substring(str.length()-2,str.length()))){
+      return str.substring(2,str.length()-2)+str.substring(0,2);
+    }
+    else {
+      return str;
+    }
+  }
+  else if (str.length()==1){
+    return str;
+  }
+  else if(str.length()==3 ){
+    return str.substring(0,1);
+  }
+  else return "";
+  
 }
 
 	
