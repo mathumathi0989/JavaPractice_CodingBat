@@ -12,6 +12,8 @@ public class dec22 {
 //array 4: Given an int array, return a new array with double the length where its last element is the same as the original array, and all the other elements are 0. The original array will be length 1 or more. Note: by default, a new int array contains all 0's
 //array 5: Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.
 //array 6: Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the 3 element to 0. Return the changed array.
+//array 7: Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as their first element.
+
 
 		
 		System.out.println();//
@@ -37,7 +39,12 @@ public class dec22 {
 		int[] nums = {1, 2, 3};
 //[1, 2, 0]
 		System.out.println(Arrays.toString(fix23(nums)));	
-	
+		int[] a = {1, 2, 3};
+			int[] b = {1, 3};
+	//	start1([1, 2, 3], [1, 3]) // 2
+		System.out.println((start1(a,b)));
+		
+		
 	}
 public static int[] makeEnds(int[] nums) {
   int[] nums1 = new int[2];
@@ -94,6 +101,15 @@ for(int i=0; i<nums.length; i++){
 return nums;
 }
 
+public static int start1(int[] a, int[] b) {
+int count=0;
+ if (a.length != 0) {
+     if (a[0]== 1) count++; }
+  if (b.length != 0) {
+     if (b[0]== 1) count++; }
+     return count;
+
+}
 
 
 }
