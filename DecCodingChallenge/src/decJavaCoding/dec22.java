@@ -13,7 +13,11 @@ public class dec22 {
 //array 5: Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.
 //array 6: Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the 3 element to 0. Return the changed array.
 //array 7: Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as their first element.
-
+//Given a string, return a string where for every char in the original, there are two chars.
+		
+		//doubleChar("The") → "TThhee"
+		
+		
 
 		
 		System.out.println();//
@@ -110,6 +114,18 @@ int count=0;
      return count;
 
 }
+	
+public static String doubleChar(String str) {
 
+String s1 = "";
+
+for(int i=0; i<str.length(); i++){
+  
+  s1 = s1 + str.charAt(i)+str.charAt(i);
+}
+return s1;
+
+
+}
 
 }
